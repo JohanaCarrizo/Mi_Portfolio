@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Average Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    /*background: linear-gradient(to bottom, #ff4654 0%, #1e2326 100%, #1e2326 0%, #1e2326 50%),url(Imagenes/pcgirl.jpg);*/
+    background: linear-gradient(to bottom, rgba(30, 35, 38, .9), rgba(30, 35, 38, .9)), url(Imagenes/pcgirl.jpeg);
+    background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Barra de navegación*/
+
+.navbar {
+    background-color: #1e2326;
+    padding: 2rem;  
+    overflow:hidden; 
+    color: #fff;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbar-nav a {
+    font-size: 18px;
+}
+
+.navbar-nav a:active { /*A REVISAR*/
+    color: red;
+}
+
+.container-fluid {
+    position: fixed; 
+    top: 0px;
+    width: 100%;
+    z-index: 1200;
+    background-color: #1e2326;
+}
+
+/*Barra de navegación | Rotacion del logo*/
+#Logo-Pagina:hover {
+    -webkit-transform: rotate(3deg);
+    transition: .3s;
+    transform: rotate(360deg);
+}
+
+/*Barra de navegación | Color del icono hamburguesa*/
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 70, 84, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #ff4654;
+} 
+
+.navbar-collapse ul li a {
+    color: #fff;
+    margin: 0 43px;
+    padding: 3px;
+    transition: .5s;
+    position: relative; /*La barrita debe ser relativo al los items de la barra de navegacion*/
+}
+
+/*Barra de navegación|barrita bajo los items del navegador*/
+.navbar-collapse ul li a::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #ff4654;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar-collapse ul li a:hover::before {
+    width: 100%;
+}
+
+.navbar-collapse ul li a:hover {
+    color: #ff4654;
+}
+
+/*Menu principal*/
+
+.principal {
+    min-height: 450px;
+    text-align: center;
+    height: 850px;
+}
+
+.principal .contenedor-menu-principal {
+    padding: 50px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    border-radius: 40px;
+    box-shadow: inset 0 0 10px #ff4654, 0 0 10px #ff4654;
+    /*background: linear-gradient(to bottom, #ff4654 0%, #1e2326 100%, #1e2326 0%, #1e2326 50%);*/
+    border: solid 1px #fff;
+}
+
+.principal .contenedor-menu-principal .foto-perfil img{
+    margin-top: 40px;
+    border: 3px solid #ff4654;
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.principal .contenedor-menu-principal h1{
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 2px #ff4654, 0 0 2px #ff4654, 0 0 2px #ff4654, 0 0 2px #ff4654;
+}
+
+.principal .contenedor-menu-principal h2{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+.principal .contenedor-menu-principal .redes a{
+    color: #ff4654;
+    border: 1px solid #ff4654;
+    display: inline-block;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    line-height: 50px;
+    margin: 20px 10px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.principal .contenedor-menu-principal .redes a:hover {
+    background-color: #ff4654;
+    color: #fff;
+    box-shadow: inset 0 0 10px #ff4654, 0 0 10px #ff4654;
+}
+
+.principal .contenedor-menu-principal .redes i{
+    width: 80px;
+}
+
+/*Seccion Sobre Mi*/
+.seccion-sobre-mi {
+    background-color: #1e2326;
+    padding: 50px;
+}
+
+.seccion-sobre-mi .fila {
+    display: flex;
+}
+
+.seccion-sobre-mi .fila .col {
+    width: 50%;
+}
+
+.seccion-sobre-mi .fila .col .contenedor-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.seccion-sobre-mi .fila .col .contenedor-skills .skills span {
+    color: #fff;
+}
+
+.seccion-sobre-mi .fila .col .contenedor-skills .skills {
+    width: 100px;
+    height: 100px;
+    background-color: #252a2b;
+    border-radius: 10px;
+    margin: 10px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.seccion-sobre-mi .fila .col .contenedor-skills .skills:hover {
+    background-color: #ff4654;
+}
+
+.seccion-sobre-mi .contenedor {
+    max-width: 1500px;
+    text-align: left;
+    margin: 70px;
+}
+
+.seccion-sobre-mi .contenedor h1 {
+    color: #fff;
+    font-size: 45px;
+    padding: 30px 0;
+    font-family: 'Cinzel', serif;
+}
+
+.seccion-sobre-mi .contenedor p {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    font-family: 'Average Sans', sans-serif;
+}
+
+.seccion-sobre-mi .contenedor .btn-box {
+    border: solid 1px #ff4654;
+    border-radius: 20px;
+    padding: 13px 60px;
+    top: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 100px;
+}
+
+.seccion-sobre-mi .contenedor .btn-box:hover {
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 10px #ff4654, 0 0 10px #ff4654;
+    background-color: #ff4654;
+    color: white;
+}
+
+/*Seccion skills*/
+
+.seccion-skills {
+    background-color: #1e2326;
+    padding: 50px 20px;
+    height: 600px;
+    
+}
+
+.seccion-skills .fila {
+    display: flex;
+}
+
+.seccion-skills .fila .col{
+    width: 50%;
+}
+
+.seccion-skills .contenedor-skills {
+    max-width: 1200px;
+    text-align: left;
+    margin: 120px;
+}
+
+.seccion-skills .fila .col h1 {
+    color: #fff;
+    font-size: 45px;
+    padding: 20px 0;
+    font-family: 'Cinzel', serif;
+    margin: 25px;
+}
+
+.seccion-skills .contenedor-skills .skills {
+    width: 100px;
+    height: 100px;
+    background-color: #252a2b;
+    border-radius: 10px;
+    margin: 10px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+/*Seccion Proyectos*/
+
+.seccion-clara{
+    color: #fff;
+    background-color: #353739;
+}
+
+.seccion-proyecto {
+    padding: 40px;
+    max-width: 100%;
+}
+
+.seccion-proyecto .container {
+    max-width: 1500px;
+    text-align: left;
+    margin: 70px;
+}
+
+.seccion-proyecto .card {
+    
+}
+
+.seccion-proyecto .row div {
+    height: 520px;
+}
+
+
+.seccion-proyecto .row {
+    width: 100%;
+    padding-bottom: 110px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body {
+    background-color: #252a2b;    
+    
+}
+
+.card-body .card-title {
+    font-size: 1.5rem;
+    margin: 7px;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.card-body .card-text {
+    margin: 15px;
+    font-size: 1.3rem;
+    color: silver;
+    font-family: 'Average Sans', sans-serif;
+    
+}
+
+.seccion-proyecto .container h1 {
+    color: #fff;
+    font-size: 45px;
+    font-family: 'Cinzel', serif;
+    line-height: 150px;
+}
+
+.seccion-proyecto .boton-vista-previa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Seccion Contacto*/
+.seccion-contacto {
+    background-color: #252a2b;
+}
+
+.seccion-contacto .conteiner {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.seccion-contacto .rectangulo {
+    margin-top:  -7rem;
+    background-color: #ff4654;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white, 0 0 15px #131517;
+    height: 250px;
+}
+
+.seccion-contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding:  1em 1em;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.seccion-contacto button:hover {
+    background-color: #fff;
+    color: #131517;
+    border: 1px solid #131517;
+    box-shadow: inset 0 0 3px #1e2326;
+}
+
+.seccion-contacto button i {
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.seccion-contacto button:hover i {
+    color: #131517;
+}
+
+.seccion-titulo {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.descripcion {
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Average Sans', sans-serif;
+}
+
+/*Seccion pie de pagina*/
+footer {
+    min-height: 100px;
+}
+
+
+/*Query Media*/
+
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        display: none; /*Esconder los item de la barra de navegacion y mostrar el icono hamburguesa*/
+    }
+
+    .navbar-collapse ul li a:hover::before {
+        width: 0%; /*Que ya no se muestre el efecto de la barrita de abajo de los items de la barra de navegacion*/
+    }
+
+}
+
+
+@media only screen and (max-width: 1000px){
+    .seccion-proyecto .row .div{
+        overflow: none;
+    }
+}
+
+
